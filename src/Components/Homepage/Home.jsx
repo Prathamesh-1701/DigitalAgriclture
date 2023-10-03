@@ -1,8 +1,11 @@
 
-import React , { useState } from 'react';
-import { Box, Heading, Text, Button, VStack, background, ChakraProvider } from '@chakra-ui/react';
+import React , { useEffect } from 'react';
+import { Box, Heading, Text, Button, VStack, Image,background, ChakraProvider } from '@chakra-ui/react';
 import Coursel from './Coursel'
 import './Home.css'
+import 'aos/dist/aos.css';
+import AOS from 'aos'
+
 
 const bgStyle = {
   // bgGradient='linear(to-r, green.200, pink.500)'
@@ -13,17 +16,35 @@ const bgStyle = {
   backgroundRepeat: 'no-repeat',
 };
 
+
+const bgStyle1 = {
+  // bgGradient='linear(to-r, green.200, pink.500)'
+  // backgroundColor: '#61554D',
+  backdropFilter: 'blur(0.01px)',
+  backgroundImage: `url(https://evergreenagriculture.net/wp-content/uploads/2015/12/new_website_details_progress_soil_health_research_education_1_635437110770618378.jpg)`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+};
+
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   return (
+    
 
       <ChakraProvider>
     
-    <Box p={8} className='Home'>
+    <Box p={8} className='Home ' >
     
       <Heading as="h1" bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )'
           bgClip='text'
           fontSize='5xl'
-          fontWeight='extrabold'>
+          fontWeight='extrabold'
+          data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
         Welcome to Our Agriculture Website!!
       </Heading>
       <Text fontSize="lg" mt={4} bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' margin={'2%'} as={'h4'} bgClip={'text'}>
@@ -46,18 +67,63 @@ const Home = () => {
 
         {/* Our Services */}
 
-        <Box>
+        <Box >
           <Heading as="h2" size="lg"  bgClip='text' bgGradient='linear(to-r, #086010, #1BBA9D,#52AE22 )' style={bgStyle}>
-            Our Services
+            Our Services__________________________
           </Heading>
+
+
+
+          <Box display={'flex'}
+            width={'full'}
+            // bg={'red'}
+            padding={'2%'}
+            justifyContent={'space-evenly'}
+             alignItems={'space-evenly'}>
+        <Image
+            
+            borderRadius='full'
+            boxSize='25%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+             
+          />
+
+        <Image
+            borderRadius='full'
+            boxSize='20%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+          />
+
+        <Image
+            borderRadius='full'
+            boxSize='15%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+          />
+
+
+        </Box>
+
+
+
+
+
+
           <Text >
           we offer a range of comprehensive services to cater to all your needs. Our team of experts is dedicated to providing top-notch solutions tailored to your requirements.
           </Text>
-          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' > Service 1: Crop Consultation and Analysis</Text>
+          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' 
+          > Service 1: Crop Consultation and Analysis</Text>
           <Text fontSize='md'>
           We offer in-depth crop consultation and analysis services, leveraging cutting-edge technologies to optimize your crop yield and quality. Our experts assess your crop health, provide insights, and recommend strategies for better results.
           </Text>
-          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' > Service 2: Precision Farming Solutions</Text>
+          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' 
+          > Service 2: Precision Farming Solutions</Text>
           <Text fontSize='md'>
           Discover the power of precision farming with our advanced technological solutions. We utilize data analytics, IoT, and automation to help you make informed decisions, improve resource management, and maximize your agricultural output.
           </Text>
@@ -65,7 +131,7 @@ const Home = () => {
           <Text fontSize='md'>
           Discover the power of precision farming with our advanced technological solutions. We utilize data anaAccess a wide range of high-quality farm equipment and machinery through our rental and leasing services. Whether you need tractors, plows, or harvesters, we have you covered. Efficient and reliable equipment to streamline your farm operations.
           </Text>
-          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )' > Service 4: Sustainable Agriculture Practices</Text>
+          <Text  fontSize='xl' as='b'  bgClip='text' bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )'> Service 4: Sustainable Agriculture Practices</Text>
           <Text fontSize='md'>
           Discover the power of precision farming with our advanced technologicalWe promote and implement sustainable agricultural practices to ensure long-term environmental and economic viability. Our experts guide you in adopting eco-friendly solutions that benefit both your farm and the planet.
           </Text>
@@ -76,7 +142,7 @@ const Home = () => {
         </Box>
 
 
-        <Box width={'full'} height={'80px'} style={bgStyle} borderRadius={'10%'}>
+        <Box width={'full'} height={'60px'} style={bgStyle1} borderRadius={'2%'} data-aos="flip-left" data-aos-duration="2000">
 
             
 
@@ -88,7 +154,7 @@ const Home = () => {
           {/* Latest Insights */}
         <Box>
           <Heading as="h2" size="lg" style={bgStyle}  bgClip='text' bgGradient='linear(to-r, #086010, #1BBA9D,#52AE22 )'>
-            Latest Insights
+            Latest Insights__________________________
           </Heading>
           <Text >
           Stay informed and up-to-date with the latest trends, tips, and news in the agriculture industry. Our insights cover a range of topics to help you make informed decisions and achieve success in your agricultural endeavors.
@@ -120,9 +186,45 @@ const Home = () => {
        
       </VStack>
 
+
+        <Box display={'flex'}
+            width={'full'}
+            // bg={'red'}
+            padding={'2%'}
+            justifyContent={'space-evenly'}
+             alignItems={'space-evenly'}>
+        <Image
+            
+            borderRadius='full'
+            boxSize='25%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+             
+          />
+
+        <Image
+            borderRadius='full'
+            boxSize='20%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+          />
+
+        <Image
+            borderRadius='full'
+            boxSize='15%'
+            src='https://c0.wallpaperflare.com/preview/520/776/992/l5du8aeifpe63vdcb7mheo0aga.jpg'
+            alt='#'
+            data-aos="zoom-in"
+          />
+
+
+        </Box>
+
       <Box mt={10}>
         <Heading as="h2" size="lg" style={bgStyle}  bgClip='text' bgGradient='linear(to-r, #086010, #1BBA9D,#52AE22 )'>
-          About Us
+          About Us__________________________
         </Heading>
         <Text>
           Your trusted partner in modern agriculture. We are a dedicated team of agricultural enthusiasts committed to revolutionizing the farming industry.
@@ -150,12 +252,14 @@ const Home = () => {
           Ready to get started?
         </Heading>
         <Button bgGradient='linear(to-r, #086010, #1BBA9D,#52AE22 )' mt={2} border={'1px solid white'}
-          style={bgStyle}
+          
           color='white'
         _hover={{
-          border: '1px solid white' ,
+          border: '1px solid #52AE22' ,
           background: 'white',
-          color: '#1BBA9D'
+          // bgGradient:'linear(to-r, #086010, #1BBA9D,#52AE22 )',
+          color: '#52AE22'
+          // color:'white'
         }}
         
         >

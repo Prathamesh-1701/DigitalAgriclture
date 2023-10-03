@@ -126,7 +126,7 @@ const SidebarContent = ({ onClose, isOpen, ...rest }: SidebarProps) => {
       fontFamily={'monospace'}
       textDecoration={'none'}
       h="full"
-      height={'700px'}
+      height={'full'}
       {...rest}
     >
     

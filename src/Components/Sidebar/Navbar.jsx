@@ -39,9 +39,9 @@ const Navbar = () => {
             >
                 <Text fontSize="xl" fontWeight="bold" fontFamily='Roboto Mono'
                 >
-                <NavLink
-                    p={{base:"1rem"}}
-                    className="nav-link" to="/">sp</NavLink>
+                    <NavLink
+                        p={{ base: "1rem" }}
+                        className="nav-link" to="/">sp</NavLink>
                 </Text>
                 <Text fontSize="xl" fontWeight="bold" fontFamily='Roboto Mono'
                 >

@@ -2,20 +2,43 @@ import React from 'react';
 import { Box, Flex, Heading, Text, Link, IconButton } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
+
+const bgStyle = {
+  // bgGradient='linear(to-r, green.200, pink.500)'
+  // backgroundColor: '#61554D',
+  backdropFilter: 'blur(0.01px)',
+  backgroundImage: `url(https://img.freepik.com/free-photo/brown-soil-background-gardening_53876-133209.jpg?w=1060&t=st=1696231750~exp=1696232350~hmac=3aed6304a09c1a38c427688b05324b197990260aab1ae256397952796cede031)`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+};
+
+
 const Footer = () => {
   return (
-    <Box as="footer" bg="gray.800" color="white" py={10}>
+    <Box as="footer"  color={'#ffff '} py={10} 
+   
+    style={bgStyle}>
       <Flex justifyContent="space-around">
         <Box>
-          <Heading fontSize="xl">Contact Us</Heading>
-          <Text>Email: info@example.com</Text>
-          <Text>Phone: +123-456-7890</Text>
+          <Heading  fontSize="xl" _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )',
+                bgclip:'text'
+              }}>Contact Us</Heading>
+          <Text _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )',
+                bgclip:'text'
+              }}>Email: info@example.com</Text>
+          <Text _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )',
+                bgclip:'text'
+              }}>Phone: +123-456-7890</Text>
         </Box>
 
         <Box>
-          <Heading fontSize="xl">Follow Us</Heading>
+          <Heading fontSize="xl" >Follow Us</Heading>
           <Flex>
             <IconButton
+              bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )'
               as={Link}
               href="#"
               target="_blank"
@@ -23,23 +46,35 @@ const Footer = () => {
               icon={<FaFacebook />}
               variant="ghost"
               mr={2}
+              _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )'
+              }}
             />
             <IconButton
               as={Link}
+              bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )'
               href="#"
               target="_blank"
               aria-label="Twitter"
               icon={<FaTwitter />}
               variant="ghost"
               mr={2}
+              _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )'
+              }}
             />
             <IconButton
               as={Link}
+              bgGradient='linear(to-l, #086010, #1BBA9D,#52AE22 )'
               href="#"
               target="_blank"
               aria-label="Instagram"
               icon={<FaInstagram />}
               variant="ghost"
+              _hover={{
+                bgGradient:'linear(to-l, #086010, #1BBA9D,#52AE22 )',
+                
+              }}
             />
           </Flex>
         </Box>
