@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                    // Specify the ECMAScript target version
+      "module": "CommonJS",               // Specify the module system to use (e.g., CommonJS)
+      "outDir": "./dist",                 // Output directory for the compiled files
+      "rootDir": "./src",                 // Root directory of input files
+      "strict": true,                     // Enable strict type checking
+      "esModuleInterop": true,            // Enable compatibility with CommonJS modules
+      "jsx": "react",                     // Specify the JSX factory function (e.g., 'react', 'preact')
+      "sourceMap": true,                  // Generate source maps for better debugging
+      "declaration": true,                // Generate declaration files (.d.ts)
+      "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+      "noImplicitAny": true,              // Disallow the use of 'any' type
+      "moduleResolution": "node"         // Specify module resolution strategy (e.g., 'node')
+    },
+    "include": ["src/**/*"],             // Specify the files to be included in compilation
+    "exclude": ["node_modules"]          // Specify files/directories to be excluded from compilation
+  }
+  

@@ -1,0 +1,12 @@
+.Banner{
+    background-color: rgb(0, 0, 0,0.4);
+
+}
+.Home{
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid rgb(189, 189, 189);
+    border-radius: 1%;
+    margin: 1%;
+    padding: 1%;
+}
